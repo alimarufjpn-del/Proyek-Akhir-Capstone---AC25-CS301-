@@ -1,1 +1,10 @@
-# Proyek-Akhir-Capstone---AC25-CS301-
+# Ringkasan Proyek
+
+Segmentasi pelanggan dengan menggunakan pendekatan RFM.
+Tim menargetkan pemasaran yang lebih tepat dengan memetakan pelanggan dari data transaksi ritel tahun 2009 hingga 2011. Tantangan utamanya promosi masih dikirim massal sehingga biaya tinggi dan dampak rendah. Data dibersihkan hingga tersisa sekitar tujuh ratus tujuh puluh sembilan ribu baris dengan penghapusan duplikat dan pembatalan invoice. Total belanja dihitung per baris lalu dibentuk tabel RFM per pelanggan. Outlier ditangani dengan IQR, fitur Frequency dan Monetary ditransformasikan log, kemudian semua fitur diskalakan agar siap untuk pemodelan. 
+Pertanyaan riset yang diajukan adalah berapa banyak segmen yang paling masuk akal untuk data ini. Apa ciri utama tiap segmen jika dilihat dari recency frequency dan monetary. Seberapa baik kualitas pemisahan segmen menurut metrik evaluasi. Apakah pola segmen tetap konsisten pada data terbaru di luar periode latih. Aksi pemasaran apa yang paling relevan untuk setiap segmen.
+Model utama memakai KMeans dengan pemilihan jumlah klaster melalui elbow dan silhouette. Hasil terbaik saat ini dua klaster pada fitur kontinu dengan nilai silhouette sekitar nol koma empat dua. Pendekatan alternatif memakai skor RFM diskrit menghasilkan nilai silhouette sekitar nol koma empat lima dan pola yang konsisten. Klaster pertama berisi pelanggan aktif dengan nilai belanja tinggi, klaster kedua berisi pelanggan dorman dengan nilai belanja rendah. Validasi temporal menggunakan potongan sembilan puluh hari terakhir menunjukkan kualitas pemisahan tetap baik dengan nilai silhouette yang tidak turun.
+Proyek ini dipilih karena masalahnya umum di ritel dan dampaknya terukur pada tingkat pembelian ulang serta nilai pesanan rata rata. RFM mudah dipahami pemangku kepentingan sehingga hasil dapat segera dipakai tanpa infrastruktur rumit. Artefak yang dihasilkan meliputi tabel RFM, label klaster per pelanggan, ringkasan metrik per klaster, persona singkat dengan rekomendasi aksi, serta grafik untuk presentasi. Langkah lanjut yang disiapkan adalah rencana uji A B untuk kampanye win back dan peningkatan nilai pesanan bagi pelanggan bernilai tinggi.
+
+# Petunjuk Setup Enviorment
+[Dokumentasi Guidline Proyek](https://drive.google.com/file/d/1Zf-UQfcnB1VhcCdCseSlsM6uHCU6ofgC/view)
